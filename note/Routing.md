@@ -21,6 +21,23 @@
 
 페이지에서 $route.params로 파라미터 값 접근 가능. ex) $route.params.id
 
+<br/><br/>
+
+## Link
+
+일반 앵커(a) 태그로 링크 element를 작성하면, 다시 SSR 된 페이지를 받아온다. 첫 페이지 이후, SPA 방식으로 링크를 연결하려면, `nuxt-link` 엘리먼트로 작성해야한다.<br/>
+
+```html
+<nuxt-link to="/users">
+```
+
+또는 script에서 $router.push로 연결.<br/>
+<kbd><img src="images/routing/link-by-script.JPG"></kbd>
+
+
+
+
+
 
 
 
