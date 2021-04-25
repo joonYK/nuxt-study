@@ -34,6 +34,17 @@
 또는 script에서 $router.push로 연결.<br/>
 <kbd><img src="images/routing/link-by-script.JPG"></kbd>
 
+<br/><br/>
+
+## 매개변수 검증
+
+`validate` 메서드로 매개 변수를 검증할 수 있다.<br/>
+
+<kbd><img src="images/routing/validate.JPG"></kbd>
+
+validate 메서드는 매개변수인 data에서 params, query, store 드의 정보를 얻을 수 있으며, 메서드에서 false를 반환하면 error 페이지로 이동한다.
+
+
 
 
 
