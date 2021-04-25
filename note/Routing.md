@@ -44,6 +44,22 @@
 
 validate 메서드는 매개변수인 data에서 params, query, store 드의 정보를 얻을 수 있으며, 메서드에서 false를 반환하면 error 페이지로 이동한다.
 
+<br/><br/>
+
+## 중첩 라우트
+
+일반 VUE APP으로 라우팅을 구성할 때 children으로 중첩된 라우팅을 구성하려면, `<nuxt-child />` 엘리먼트로 구성한다.
+
+* vue 파일
+
+<kbd><img src="images/routing/nested-routes-vue.JPG"></kbd>
+
+* 디렉토리
+
+<kbd><img src="images/routing/nested-routes-directory.JPG"></kbd>
+
+위 디렉토리에서 users.vue에 &lt;nuxt-child /&gt; 엘리먼트를 만들고, users 폴더를 만들어서, 그 아래에 page 컴포넌트를 구성하면 users.vue 페이지의 &lt;
+nuxt-child /&gt;가 적용된 엘리먼트에 users 디렉토리의 페이지들이 라우팅되고 출력된다.
 
 
 
