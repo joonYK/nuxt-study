@@ -22,6 +22,7 @@ export default {
 }
 </script>
 ```
+위의 &lt;nuxt /&gt; 엘리먼트에 layout을 적용받은 pages들이 라우팅 된다.
 
 * 적용받을 page의 Layout 적용
 
@@ -33,7 +34,9 @@ export default {
 </script>
 ```
 
+<br/><br/>
 
+## 에러 페이지
 
-
+layouts 디렉토리에 error.vue를 만들어서 적용하면, 404 오류와 같은 문제가 발생하면 반환하는 에러 페이지를 구성할 수 있다.
 
