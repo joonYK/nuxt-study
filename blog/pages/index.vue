@@ -3,20 +3,18 @@
         <section class="intro">
             <h1>Get the latest tech news!</h1>
         </section>
-        <section class="featured-posts">
-            <PostPreview id="1" title="Hello there!" previewText="This my first post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
-            <PostPreview id="1" title="Hello there!" previewText="This my second post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
-            <PostPreview id="1" title="Hello there!" previewText="This my third post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
-        </section>
+        <post-list/>
     </div>
 </template>
 
 <script>
 import PostPreview from '@/components/Posts/PostPreview'
+import PostList from '../components/Posts/PostList.vue'
 
 export default {
     components: {
-        PostPreview
+        PostPreview,
+        PostList
     }
 
 }
