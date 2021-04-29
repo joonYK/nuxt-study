@@ -4,9 +4,9 @@
             <h1>Get the latest tech news!</h1>
         </section>
         <section class="featured-posts">
-            <PostPreview id="1" title="Hello there!" previewText="This my first post!" thumbnail="/_nuxt/assets/images/img.jpeg"/>
-            <PostPreview id="1" title="Hello there!" previewText="This my second post!" thumbnail="/_nuxt/assets/images/img.jpeg"/>
-            <PostPreview id="1" title="Hello there!" previewText="This my third post!" thumbnail="/_nuxt/assets/images/img.jpeg"/>
+            <PostPreview id="1" title="Hello there!" previewText="This my first post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
+            <PostPreview id="1" title="Hello there!" previewText="This my second post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
+            <PostPreview id="1" title="Hello there!" previewText="This my third post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
         </section>
     </div>
 </template>
@@ -28,6 +28,7 @@ export default {
   position: relative;
   padding: 30px;
   box-sizing: border-box;
+  background-image: url('~assets/images/main-page-image.jpg');
   background-position: center;
   background-size: cover;
 }
