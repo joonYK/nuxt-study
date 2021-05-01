@@ -1,8 +1,23 @@
 <template>
 	<section class="post-list">
-		<PostPreview id="1" title="Hello there!" previewText="This my first post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
-		<PostPreview id="2" title="Hello there!" previewText="This my second post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
-		<PostPreview id="3" title="Hello there!" previewText="This my third post!" :thumbnail="require('~/assets/images/img.jpeg')"/>
+		<PostPreview 
+			id="1" 
+			:is-admin="isAdmin" 
+			title="Hello there!" 
+			previewText="This my first post!" 
+			:thumbnail="require('~/assets/images/img.jpeg')"/>
+		<PostPreview 
+			id="2" 
+			:is-admin="isAdmin" 
+			title="Hello there!" 
+			previewText="This my second post!" 
+			:thumbnail="require('~/assets/images/img.jpeg')"/>
+		<PostPreview 
+			id="3" 
+			:is-admin="isAdmin" 
+			title="Hello there!" 
+			previewText="This my third post!" 
+			:thumbnail="require('~/assets/images/img.jpeg')"/>
 	</section>
 </template>
 
@@ -13,8 +28,13 @@ export default {
 	name: 'PostList',
     components: {
         PostPreview
-    }
-
+    },
+	props: {
+		isAdmin : {
+			type: Boolean,
+			default: false
+		}
+	}
 }
 </script>
 
