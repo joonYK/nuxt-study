@@ -35,3 +35,26 @@ asyncData 메서드로 데이터를 작성하면, asyncData가 데이터를 반�
 * callback 파라미터 사용
 
 <kbd width="70%"><img src="images/asyncData/asyncData callback.png"></kbd>
+
+<br/><br/>
+
+## asyncData에서 console.log (universal 모드)
+
+```javascript
+asyncData() {
+	console.log('asyncData is executed!');
+	...
+	...
+}
+```
+
+* 첫 페이지 로드
+
+asyncData에서 위 코드처럼 console.log를 남겼을 때, 브라우저에서 처음 url을 입력해서 페이지를 받아오거나 새로고침을 하는 경우, log는 브라우저가 아니라 node 서버에 남는다.
+
+<br/>
+
+* 페이지 안에서 nuxt-link로 이동할 때
+
+첫 페이지 로드 이후에는 SPA 방식으로 구동되기 때문에 브라우저의 console에 log가 출력된다.
+
