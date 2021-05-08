@@ -16,33 +16,11 @@ export default {
         PostPreview,
         PostList
     },
-    asyncData(context, callback) {
-        console.log('asyncData is executed!');
-        setTimeout(() => {
-            callback(null, {
-                loadedPosts : [
-                    {
-                        id : "1",
-                        title : "First Post!",
-                        previewText : "This my first post!",
-                        thumbnail : require('~/assets/images/img.jpeg')
-                    },
-                    {
-                        id : "2",
-                        title : "Second Post!",
-                        previewText : "This my second post!",
-                        thumbnail : require('~/assets/images/img.jpeg')
-                    },
-                    {
-                        id : "3",
-                        title : "Third Post!",
-                        previewText : "This my third post!",
-                        thumbnail : require('~/assets/images/img.jpeg')
-                    }
-                ]
-            });
-        }, 1500);
-    },
+    computed: {
+        loadedPosts() {
+            return this.$store.getters.loadedPosts;
+        }
+    }
 }
 </script>
 
