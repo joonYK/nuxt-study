@@ -94,3 +94,17 @@ asyncData(context) {
 
 코드를 Promise를 반환하는 방식으로 변경하면, 실패에 따라 에러 페이지를 반환하는 것을 좀 더 알아보기 쉽고 편하게 작성할 수 있다.
 
+
+<br/><br/>
+
+## asyncData vs fetch(nuxt 2.12+)
+
+
+fetch 훅 메서드는 asyncData 훅 메서드와 성격이 비슷하다. 초기 렌더링시에 서버에서 동작하고, 라우팅시에 클라이언트에서 동작한다.<br/>
+하지만 asyncData는 page components에만 사용할 수 있으나 fetch는 모든 컴포넌트에 사용할 수 있으며,<br/> 
+클라이언트에서 라우팅시에 asyncData는 로딩 상태를 표시할 수 없고, 완료될 때까지 라우팅을 차단하며, 실패 시 에러 페이지를 반환한다. fetch는 로딩 상태를 출력하거나 바로 에러 페이지를 반환할 수 있는 기능을 제공한다.<br/><br/>
+
+각 메서드의 존재 목적으로 asyncData는 페이지가 로딩되기전에 data를 미리 지정하고 컴포넌트가 생성될 때 병합시켜서 빠르게 구성하는데 목적이 있다면, fetch는 비동기 작업(api 호출)을 목적으로 한다.
+
+[데이터에 대한 두 메서드 차이](https://ko.nuxtjs.org/docs/2.x/features/data-fetching)<br/>
+[각 메서드의 목적](https://www.a-ha.io/questions/4050f94b442d0048b8c81562dc3d26e1)
