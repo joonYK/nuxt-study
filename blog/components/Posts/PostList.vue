@@ -6,7 +6,7 @@
 			:is-admin="isAdmin" 
 			:title="post.title" 
 			:previewText="post.previewText" 
-			:thumbnail="post.thumbnail"/>
+			:thumbnail="require(`~/assets/images/${post.thumbnail}`)"/>
 	</section>
 </template>
 
