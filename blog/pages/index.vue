@@ -20,6 +20,9 @@ export default {
         loadedPosts() {
             return this.$store.getters.loadedPosts;
         }
+    },
+    head : {
+      title : 'test'
     }
 }
 </script>
