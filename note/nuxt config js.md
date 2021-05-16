@@ -36,3 +36,20 @@ export default {
 }
 </script>
 ```
+
+<br/><br/>
+
+## router
+
+* 존재하지 않는 url 요청 시(404 error), 이동할 페이지 설정.
+
+```javascript
+router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '*',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    }
+  }
+```

@@ -41,5 +41,14 @@ export default {
 
   env : {
     baseUrl : process.env.BASE_URL || 'https://nuxt-blog-cdce8-default-rtdb.firebaseio.com'
+  },
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '*',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    }
   }
 }
