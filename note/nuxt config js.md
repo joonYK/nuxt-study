@@ -53,3 +53,32 @@ router: {
     }
   }
 ```
+
+<br/><br/>
+
+Plugins & Modules
+
+* Plugins
+
+plugins은 페이지가 처음 렌더링 되기 이전에 적용할 플러그인 (전역 컴포넌트, 필터 등)을 적용할 수 있다. 그러면 서버측에서 첫 렌더링 시, 클라이언트에서 렌더링 시에 사용 가능하며, 클라이언트나 서버측에서만 사용가능하도록 적용도 가능하다.
+
+[plugins 설정 참고](https://go.nuxtjs.dev/config-plugins)
+
+```javascript
+// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  plugins: [
+    '~plugins/core-components.js',
+    '~plugins/date-filter.js'
+  ],
+```
+
+<br/>
+
+* Modules
+
+Module은 nuxt의 핵심기능을 확장 할 수 있는 확장 기능이라고 할 수 있다. nuxt가 부팅될 때 적용이 되며, 프레임워크를 개발할 때, 불필요한 기능을 제거해서 가볍게 개발을 시작하고 필요한 기능은 개발하면서 모듈로 추가하고 확장할 수 있도록 만련해 두었다. <br/>
+이러한 모듈은 직접 만들수도 있지만, nuxt 팀과 nuxt 커뮤니티에서 미리 만들어서 배포해놓은 모듈이 있다.
+
+[Nuxt Modules](https://modules.nuxtjs.org/)
+
+
