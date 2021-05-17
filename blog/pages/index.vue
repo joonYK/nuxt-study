@@ -9,12 +9,10 @@
 
 <script>
 import PostPreview from '@/components/Posts/PostPreview'
-import PostList from '../components/Posts/PostList.vue'
 
 export default {
     components: {
-        PostPreview,
-        PostList
+        PostPreview
     },
     computed: {
         loadedPosts() {
