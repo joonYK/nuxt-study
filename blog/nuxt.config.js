@@ -49,7 +49,8 @@ export default {
   },
 
   env : {
-    baseUrl : process.env.BASE_URL || 'https://nuxt-blog-cdce8-default-rtdb.firebaseio.com'
+    baseUrl : process.env.BASE_URL || 'https://nuxt-blog-cdce8-default-rtdb.firebaseio.com',
+    fbAPIKey: 'AIzaSyAGkGdmEB_PY__KJitFVlYykarP-zVBhuA'
   },
 
   router: {
