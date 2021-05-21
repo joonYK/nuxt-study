@@ -31,27 +31,15 @@ export default {
   },
   methods: {
     onSubmit() {
-      
-      const data = {
+            
+      this.$store.dispatch('authenticateUser', {
+        isLogin: this.isLogin,
         email : this.email,
         password : this.password,
         returnSecureToken : true
-      };
-      
-      if (!this.isLogin) {
-        this.$axios.$post(this.signUpUrl, data)
-        .then(result => {
-          console.log(result);
-        })
-        .catch(e => console.log(e));
-
-      } else {
-        this.$axios.$post(this.loginUrl, data)
-          .then(result => {
-            console.log(result);
-          })
-          .catch(e => console.log(e));
-      }
+      }).then(() => {
+        this.$router.push('/admin');
+      })
       
     }
   }
