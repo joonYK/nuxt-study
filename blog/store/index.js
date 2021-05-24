@@ -4,7 +4,7 @@ const createStore = () => {
 	return new Vuex.Store({
 		state: {
 			loadedPosts: [],
-			token: ''
+			token: null
 		},
 		mutations: {
 			setPosts(state, posts) {
@@ -74,6 +74,9 @@ const createStore = () => {
 		getters: {
 			loadedPosts(state) {
 				return state.loadedPosts;
+			},
+			isAuthenticated(state) {
+				return state.token != null;
 			}
 		}
 	})	
